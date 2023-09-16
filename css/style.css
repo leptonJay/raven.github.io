@@ -1,0 +1,81 @@
+body{
+	/* padding: 5px; */
+	/* box-sizing: border-box; */
+}
+div{
+    padding: 10px;
+}
+*{user-select: none;margin: 0px;box-sizing: border-box;font-family: system-ui;}
+h1{color: aqua;}
+h2{color: white;}
+h3{
+    text-decoration: underline;
+    color: #050d6f;
+}
+b{color:blue;}
+p{font-size: medium;font-family: system-ui;}
+li{
+    padding: 5px;
+}
+a{
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: #990707;
+}
+#contents{
+	font-size: 1.2rem;
+	background: #a4b3b6;
+}
+#cont_title{
+	font-size: 1.3rem;
+	color: black;
+	text-decoration: underline;
+}
+#header{
+	background: #050d6f;
+	position: sticky;
+	top: 0px;
+	border-bottom: 2px solid red;
+	width: 100%;
+	padding: 24px;
+}
+#headicon{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border: 2px solid aqua;
+	border-radius: 20px;
+	background: url("../images/bk_img.png");
+	background-size: 100% 130%;
+	background-repeat: no-repeat;
+}
+#footer{
+	position: relative;
+	width: 100%;
+	background: #050d6f;
+	bottom: 0;
+	border-top: 2px solid red;
+	padding: 20px;
+}
+#helpBody, #privacyBody{
+	background: #ccd0d3;
+	padding: 2px;
+}
+#privacyBody{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+@media screen and (max-width:500px){
+	#headicon{
+		width:50px;
+		height:50px;
+		border-radius: 10px;
+		top: 15px;
+		left: 10px;
+	}
+}
+@media screen and (max-width:300px){
+	#headicon{
+		display:none;
+	}
+}
