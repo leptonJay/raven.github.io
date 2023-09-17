@@ -1,16 +1,47 @@
-body{
-	/* padding: 5px; */
-	/* box-sizing: border-box; */
+@font-face {
+	font-family: 'roboto-bold'; 
+	src: url('Roboto-Bold.woff') format('woff');
 }
+
+@font-face {
+	font-family: 'roboto-medium';
+	src: url('Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'roboto-itallic';
+	src: url('Roboto-Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'roboto-medium-italic';
+	src: url('Roboto-MediumItalic.woff') format('woff');
+}
+@font-face {
+	font-family: 'roboto-light';
+	src: url('Roboto-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'roboto-thin';
+	src: url('Roboto-Thin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'roboto-regular';
+	src: url('Roboto-Regular.woff') format('woff');
+}
+
 div{
     padding: 10px;
 }
-*{user-select: none;margin: 0px;box-sizing: border-box;font-family: system-ui;}
-h1{color: aqua;}
-h2{color: white;}
+*{user-select: none;margin: 0px;box-sizing: border-box;font-family: roboto-regular;}
+h1{/* color: aqua; */font-family: roboto-bold;font-weight: inherit;}
+h2{color: blue;}
 h3{
     text-decoration: underline;
     color: #050d6f;
+    padding: 20px 0px 10px 0px;
 }
 b{color:blue;}
 p{font-size: medium;font-family: system-ui;}
@@ -24,7 +55,7 @@ a{
 }
 #contents{
 	font-size: 1.2rem;
-	background: #a4b3b6;
+	background: #f1f1f1;
 }
 #cont_title{
 	font-size: 1.3rem;
@@ -32,39 +63,115 @@ a{
 	text-decoration: underline;
 }
 #header{
-	background: #050d6f;
-	position: sticky;
-	top: 0px;
-	border-bottom: 2px solid red;
+	display: flex;
+	flex-wrap: nowrap;
+	border-bottom: 1px solid #050d6f;
 	width: 100%;
-	padding: 24px;
+	padding: 10px;
+}
+#app_label{
+    padding: 0px 30px;
+    font-family: cursive;
+}
+#subheader{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
 }
 #headicon{
-	position: absolute;
 	width: 80px;
 	height: 80px;
-	border: 2px solid aqua;
 	border-radius: 20px;
 	background: url("../images/bk_img.png");
+	background-color: black;
 	background-size: 100% 130%;
+	background-repeat: no-repeat;
+}
+#welcome{
+    padding: 0px 20px;
+    color: #000040;
+    font-family: fantasy;
+    font-weight: 900;
+}
+#companylogo{
+	width: 251px;
+	min-width: 251px;
+	height: 145px;
+	border-radius: 20px;
+	background: url("../images/tbs_logo.png");
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 #footer{
 	position: relative;
 	width: 100%;
-	background: #050d6f;
+	background: #f1f1f1;
 	bottom: 0;
-	border-top: 2px solid red;
+	border-top: 1px solid #050d6f;
 	padding: 20px;
 }
-#helpBody, #privacyBody{
-	background: #ccd0d3;
-	padding: 2px;
+#footer h2, #footer p{color: #050d6f;}
+#contentsbody{
+	padding: 10px 100px;
 }
-#privacyBody{
-	padding-left: 30px;
-	padding-right: 30px;
+#menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
 }
+#menu div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+#menu div a{
+	
+width: 100%;
+	
+color: black;
+	
+padding: 10px 14px;
+	
+text-align: center;
+	
+text-decoration: none;
+}
+
+#menu div:hover {
+    border-bottom: 2px solid #ccd0d3;
+}
+#menu .active{
+	border-bottom: 2px solid blue;
+}
+
+#menu .active:hover{
+	border-bottom: 2px solid blue;
+}
+
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery img{
+    height: 332px;
+    margin: 5px;
+    border-radius: 12px;
+    background: black;
+    border: 1px solid;
+    display: flex;
+}
+#title{display: flex;justify-content: flex-start;align-items: center;width: 100%;min-width: 100%;}
 @media screen and (max-width:500px){
 	#headicon{
 		width:50px;
@@ -72,6 +179,9 @@ a{
 		border-radius: 10px;
 		top: 15px;
 		left: 10px;
+	}
+	#companylogo{
+		display:none;
 	}
 }
 @media screen and (max-width:300px){
