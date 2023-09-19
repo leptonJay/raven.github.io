@@ -32,11 +32,60 @@
 	src: url('Roboto-Regular.woff') format('woff');
 }
 
+@font-face {
+	font-family: 'darkdimension';
+	src: url('DarkDimension-ollx.ttf');
+}
+
+@font-face {
+	font-family: 'darkdimension2';
+	src: url('DarkDimension-YxZv.ttf');
+}
+
+@font-face {
+	font-family: 'darkdimension-itallic';
+	src: url('DarkDimension-Italic.ttf');
+}
+
+@font-face {
+	font-family: 'ai';
+	src: url('ArtificialIntelligencePersonalUseRegular-9YJV2.otf');
+}
+
+@font-face {
+	font-family: 'android';
+	src: url('Android101-wVp8.ttf');
+}
+@font-face {
+	font-family: 'assasin';
+	src: url('AndroidAssassin-grz1.ttf');
+}
+
+@font-face {
+	font-family: 'assasin2';
+	src: url('AndroidAssassin-WXXY.ttf');
+}
+
+@font-face {
+	font-family: 'assasin-italic';
+	src: url('AndroidAssassinItalic-eDDp.ttf');
+}
+
+@font-face {
+	font-family: 'android-normal';
+	src: url('Android101-El3e.ttf');
+}
+
+@font-face {
+	font-family: 'android-italic';
+	src: url('AndroidAssassinItalic-eDDp.ttf');
+}
+
 div{
     padding: 10px;
 }
-*{user-select: none;margin: 0px;box-sizing: border-box;font-family: roboto-regular;}
-h1{/* color: aqua; */font-family: roboto-bold;font-weight: inherit;}
+*{user-select: none;margin: 0px;box-sizing: border-box;transition: 0.4s;font-family: roboto-regular;}
+h1{/* color: aqua; */font-family: ai;font-weight: inherit;}
 h2{color: blue;}
 h3{
     text-decoration: underline;
@@ -44,12 +93,12 @@ h3{
     padding: 20px 0px 10px 0px;
 }
 b{color:blue;}
-p{font-size: medium;font-family: system-ui;}
+p{font-size: medium;}
 li{
     padding: 5px;
 }
 a{
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	cursor: pointer;
 	color: #990707;
 }
@@ -71,7 +120,7 @@ a{
 }
 #app_label{
     padding: 0px 30px;
-    font-family: cursive;
+    font-family: android-normal;
 }
 #subheader{
     display: flex;
@@ -79,10 +128,13 @@ a{
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+    padding: 0px;
 }
 #headicon{
 	width: 80px;
 	height: 80px;
+	min-width: 80px;
+	min-height: 80px;
 	border-radius: 20px;
 	background: url("../images/bk_img.png");
 	background-color: black;
@@ -94,6 +146,7 @@ a{
     color: #000040;
     font-family: fantasy;
     font-weight: 900;
+    transition: 0.4s;
 }
 #companylogo{
 	width: 251px;
@@ -103,6 +156,7 @@ a{
 	background: url("../images/tbs_logo.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	transition: 0.4s;
 }
 #footer{
 	position: relative;
@@ -116,6 +170,10 @@ a{
 #contentsbody{
 	padding: 10px 100px;
 }
+#page_label h2{
+    font-family: 'android';
+}
+
 #menu{
     width: 100%;
     display: flex;
@@ -133,16 +191,11 @@ a{
     padding: 0px;
 }
 #menu div a{
-	
-width: 100%;
-	
-color: black;
-	
-padding: 10px 14px;
-	
-text-align: center;
-	
-text-decoration: none;
+	width: auto;
+	color: black;
+	padding: 10px 14px;
+	text-align: center;
+	text-decoration: none;
 }
 
 #menu div:hover {
@@ -171,21 +224,66 @@ text-decoration: none;
     border: 1px solid;
     display: flex;
 }
-#title{display: flex;justify-content: flex-start;align-items: center;width: 100%;min-width: 100%;}
+#title{display: flex;justify-content: flex-start;align-items: center;width: 100%;min-width: 100%;transition: 0.4s;}
 @media screen and (max-width:500px){
 	#headicon{
 		width:50px;
 		height:50px;
 		border-radius: 10px;
+		min-width: 50px;
+		min-height: 50px;
 		top: 15px;
 		left: 10px;
 	}
 	#companylogo{
-		display:none;
+	min-width: 121px;
+	height: 73px;
+	width: auto;
 	}
+	#header{border-bottom: 2px solid #050d6f;}
+	#contentsbody{
+    padding: 5px;
 }
-@media screen and (max-width:300px){
-	#headicon{
+	#app_label{
+    font-size: 20px;
+}
+	#page_label h2{font-size: 18px;}
+	#welcome{
+    width: 100%;
+    min-width: 100%;
+    text-align: center;
+    text-shadow: 1px 4px #000000;
+    font-size: 23px;
+    color: aqua;
+    display: none;
+}
+	#title{
+    flex-wrap: wrap;
+}
+	#menu{
+    height: 31px;
+}
+	#menu_mobile{
+    display: block;
+    height: 100%;
+    flex-wrap: wrap;
+    background: white;
+    z-index: 5000;
+    justify-content: flex-start;
+}
+
+	#menu div{
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+    width: auto;
+}
+	#menu div a{
+    font-size: medium;
+}
+}
+@media screen and (min-width:500px){
+	#welcome{
 		display:none;
 	}
 }
